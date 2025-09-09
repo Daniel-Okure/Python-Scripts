@@ -12,8 +12,7 @@ def get_folder_size(path):
     return total
             
 
-user = os.getlogin()
-base = rf"C:\Users\{user}"
+base = os.path.expanduser("~")
 folder_list = ["Desktop", "Downloads", "Documents", "Videos", "Pictures", "Music"]
 sizes = {}
 grand_total = 0
