@@ -82,6 +82,6 @@ Open the code editor of your choice or python's IDLE and input your cuportal use
 
 Lecture Attendance is set by default, but if you want to check your chapel and roll call, set the mode parameter to Student Affairs and run the script.
 
-I tried to make this with poor network conditions in mind (that's why there are so many timeouts), but the bot works best with good connectivity. Otherwise, it may timeout and exit unsuccessfully.
+I tried to make this with poor network conditions in mind, but the bot works best with good connectivity. Otherwise, it may timeout and exit unsuccessfully.
 
 
