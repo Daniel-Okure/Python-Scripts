@@ -39,7 +39,7 @@ async def myinstants_scraper(url):
                         with open(filename, "wb") as f:
                             f.write(file_content)
                 
-        return 1
+    await browser.close()
 
 page_url = "https://www.myinstants.com/en/index/us"
 asyncio.run(myinstants_scraper(page_url))
