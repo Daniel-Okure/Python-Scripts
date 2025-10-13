@@ -78,9 +78,8 @@ Go to your command line **(cmd)** for Windows **(terminal)** for mac/linux and i
 
 ### Step 6: Run the script
 
-Open the code editor of your choice or python's IDLE and input your cuportal username and password to the attendance checker function as directed in the comments. 
+Open the code editor of your choice or python's IDLE and run the script. From there, all that's left is to input your cuportal username, password, and the attendance you want to check as prompted. 
 
-Lecture Attendance is set by default, but if you want to check your chapel and roll call, set the mode parameter to Student Affairs and run the script.
 
 I tried to make this with poor network conditions in mind, but the bot works best with good connectivity. Otherwise, it may timeout and exit unsuccessfully.
 
