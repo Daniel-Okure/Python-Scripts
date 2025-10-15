@@ -78,7 +78,9 @@ Go to your command line **(cmd)** for Windows **(terminal)** for mac/linux and i
 
 ### Step 6: Run the script
 
-Open the code editor of your choice or python's IDLE and run the script. From there, all that's left is to input your cuportal username, password, and the attendance you want to check as prompted. 
+It may seem daunting to set up, but once python and all the dependencies are installed, you can double-click the script to run it however many times as you want. 
+
+From there, all that's left is to input your cuportal username, password, and the attendance you want to check as prompted. 
 
 
 I tried to make this with poor network conditions in mind, but the bot works best with good connectivity. Otherwise, it may timeout and exit unsuccessfully.
