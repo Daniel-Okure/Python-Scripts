@@ -70,7 +70,7 @@ If they don't work, refer back to step 2 and ensure you add both Python and pip 
 
 ### Step 5: Install project dependencies
 
-Go to your command line **(cmd)** for Windows **(terminal)** for mac/linux and install playwright and the browser it uses, with:
+Go to your command line **(cmd)** for Windows or **(terminal)** for mac/linux and install playwright and the browser it uses, with:
 
 ```pip install playwright``` installs the playwright module
 
