@@ -56,15 +56,16 @@ If you see something like python 3.10.0, you're good to go! If not, then visit [
 2. Install [Homebrew](https://brew.sh/) if you don't have it, then run:
 ```brew install python```
 3. Verify installation:
-```python --version```
+```python3 --version```
+4. If that doesn't work for you, you can visit [Python.org](https://www.python.org/downloads/macos/) releases for macOS and click the macOS 64-bit universal2 installer to install python on your system.
 
 ### Step 4: Verify Python and pip installation
 
-After installation, check that both Python and pip work, with:
+After installation, check that both Python and pip work in the command prompt or terminal, with:
 
-```python --version``` for python
+```python --version``` for windows and ```python3 --version``` for mac
 
-```pip --version``` for pip
+```pip --version``` for windows and ```pip3 --version``` for mac
 
 If they don't work, refer back to step 2 and ensure you add both Python and pip to PATH.
 
@@ -72,9 +73,9 @@ If they don't work, refer back to step 2 and ensure you add both Python and pip 
 
 Go to your command line **(cmd)** for Windows or **(terminal)** for mac/linux and install playwright and the browser it uses, with:
 
-```pip install playwright``` installs the playwright module
+```pip install playwright``` installs the playwright module on windows while ```pip3 install playwright``` installs the module on mac.
 
-```playwright install``` installs the chromium browser
+```playwright install``` installs the browsers playwright uses on windows while ```python3 -m playwright install``` does the same on mac.
 
 ### Step 6: Run the script
 
