@@ -1,18 +1,19 @@
 import asyncio
 from playwright.async_api import async_playwright
+from getpass import getpass
 
 print("Enter your portal username: ")
 user = input().strip() # Username
 
 print("Enter your portal password: ")
-passwd = input().strip() # Password
+passwd = getpass() # Password
 
 print("What do you want to check: Lecture Attendance (1) or Student Affairs (2)?")
 choice = input().strip()
 
 async def attendance_checker(url, username, password, mode):
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True) # Set to False if you want to see the magic :)
+        browser = await p.chromium.launch(headless=False) # Set to False if you want to see the magic :)
         context = await browser.new_context()
         page = await context.new_page()
         await page.goto(url, wait_until="networkidle", timeout=0)
@@ -24,6 +25,18 @@ async def attendance_checker(url, username, password, mode):
             await page.locator("input[name='userid']").fill(username)
             await page.locator("input[name='inputpassword1']").fill(password)
             await page.click("input[type='submit']")
+            
+            error_message = await page.locator("text=Username or Password Incorrect").is_visible()
+            
+            if error_message:
+                password = getpass("Invalid Username or Password. Please re-enter your password: ")
+                await page.locator("input[name='inputpassword1']").fill(password)
+                await page.click("input[type='submit']")
+                
+            if await page.locator("text=Username or Password Incorrect").is_visible():
+                print("Login failed again. Exiting.")
+                await browser.close()
+                return
         
             await page.click("text=attendance", timeout=0)
         
