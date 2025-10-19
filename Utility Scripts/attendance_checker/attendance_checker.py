@@ -13,7 +13,7 @@ choice = input().strip()
 
 async def attendance_checker(url, username, password, mode):
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=False) # Set to False if you want to see the magic :)
+        browser = await p.chromium.launch(headless=True) # Set to False if you want to see the magic :)
         context = await browser.new_context()
         page = await context.new_page()
         await page.goto(url, wait_until="networkidle", timeout=0)
