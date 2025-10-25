@@ -44,28 +44,51 @@ If you see something like python 3.10.0, you're good to go! If not, then visit [
 
   Example:
 
-  ```C:\Users\<YourName>\AppData\Local\Programs\Python\Python311\```
-  ```C:\Users\<YourName>\AppData\Local\Programs\Python\Python311\Scripts\```
+```bash
+  C:\Users\<YourName>\AppData\Local\Programs\Python\Python311\
+```
+  
+```bash
+  C:\Users\<YourName>\AppData\Local\Programs\Python\Python311\Scripts
+```
+
 
 3. Verify installation:
-```python --version```
+```bash
+   python --version
+```
 
 ### Step 3: For MacOS
 
-1. MacOS often includes Python 2 by default. You'll need a newer version.
-2. Install [Homebrew](https://brew.sh/) if you don't have it, then run:
-```brew install python```
-3. Verify installation:
-```python3 --version```
-4. If that doesn't work for you, you can visit [Python.org](https://www.python.org/downloads/macos/) releases for macOS and click the macOS 64-bit universal2 installer to install python on your system.
+1. Like in Windows, first open your Terminal and confirm whether you have python already installed
+2. Type the following and press **Enter:**
+```bash
+   python3 --version
+```
 
 ### Step 4: Verify Python and pip installation
 
 After installation, check that both Python and pip work in the command prompt or terminal, with:
 
-```python --version``` for windows and ```python3 --version``` for mac
+```bash
+  python --version
+``` 
+for windows and 
 
-```pip --version``` for windows and ```pip3 --version``` for mac
+```bash
+  python3 --version
+``` 
+for mac
+
+```bash
+  pip --version
+``` 
+for windows and 
+
+```bash
+  pip3 --version
+``` 
+for mac.
 
 If they don't work, refer back to step 2 and ensure you add both Python and pip to PATH.
 
@@ -73,13 +96,29 @@ If they don't work, refer back to step 2 and ensure you add both Python and pip 
 
 Go to your command line **(cmd)** for Windows or **(terminal)** for mac/linux and install playwright and the browser it uses, with:
 
-```pip install playwright``` installs the playwright module on windows while ```pip3 install playwright``` installs the module on mac.
+```bash
+  pip install playwright
+``` 
+installs the playwright module on windows while 
+```bash
+  pip3 install playwright
+``` 
+installs the module on mac.
 
-```playwright install``` installs the browsers playwright uses on windows while ```python3 -m playwright install``` does the same on mac.
+```bash
+  playwright install
+``` 
+installs the browsers playwright uses on windows while 
+```bash
+  python3 -m playwright install
+``` 
+does the same on mac.
 
 ### Step 6: Run the script
 
-It may seem daunting to set up, but once python and all the dependencies are installed, you can double-click the script to run it however many times as you want. 
+It may seem daunting to set up, but once python and all the dependencies are installed, you can double-click the script to run it however many times as you want on Windows!
+
+However, to run the script on Mac, users will need to right-click and open the script with Python Launcher. If you see any prompt window pop up, allow the script to access your terminal, and it should run just fine.
 
 From there, all that's left is to input your cuportal username, password, and the attendance you want to check as prompted. 
 
