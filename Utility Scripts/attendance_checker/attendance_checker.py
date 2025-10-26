@@ -38,7 +38,8 @@ async def attendance_checker(url, username, password, mode):
                 print("Login failed again. Exiting.")
                 await browser.close()
                 return
-        
+            
+            print("Successfully logged in! Navigating...")
             await page.click("text=attendance", timeout=0)
         
             # Navigate to the attendance you want to check
