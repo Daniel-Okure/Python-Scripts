@@ -1,12 +1,11 @@
 import asyncio
+import stdiomask
 from playwright.async_api import async_playwright
-from getpass import getpass
 
 print("Enter your portal username: ")
 user = input().strip() # Username
 
-print("Enter your portal password: ")
-passwd = getpass() # Password
+passwd = stdiomask.getpass(prompt="Enter your portal password: ", mask="*") # Password
 
 print("What do you want to check: Lecture Attendance (1) or Student Affairs (2)?")
 choice = input().strip()
@@ -29,7 +28,7 @@ async def attendance_checker(url, username, password, mode):
             error_message = await page.locator("text=Username or Password Incorrect").is_visible()
             
             if error_message:
-                password2 = getpass("Invalid Username or Password. Please re-enter your password: ")
+                password2 = stdiomask.getpass(prompt="Invalid Username or Password. Please re-enter your password: ", mask="*")
                 await page.locator("input[name='userid']").fill(username)
                 await page.locator("input[name='inputpassword1']").fill(password2)
                 await page.click("input[type='submit']")

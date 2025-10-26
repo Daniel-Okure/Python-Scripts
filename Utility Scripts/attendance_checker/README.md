@@ -99,12 +99,14 @@ Go to your command line **(cmd)** for Windows or **(terminal)** for mac/linux an
 
 ```bash
   pip install playwright
+  pip install stdiomask
 ``` 
-installs the playwright module on windows while 
+installs playwright and stdiomask modules on windows while 
 ```bash
   pip3 install playwright
+  pip3 install stdiomask
 ``` 
-installs the module on mac.
+installs the dependencies on mac.
 
 ```bash
   playwright install
