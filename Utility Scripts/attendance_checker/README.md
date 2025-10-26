@@ -65,7 +65,7 @@ If you see something like python 3.10.0, you're good to go! If not, then visit [
 ```bash
    python3 --version
 ```
-3. If you don't see anything, visit [Python.org](https://www.python.org/downloads/) and install the latest python release for macOS.
+3. If you don't see anything, visit [Python.org](https://www.python.org/downloads/macos/) and install the latest python release for macOS.
 
 ### Step 4: Verify Python and pip installation
 
