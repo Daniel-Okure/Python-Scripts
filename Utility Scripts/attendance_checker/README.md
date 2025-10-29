@@ -8,13 +8,13 @@ This is a simple python script I wrote that logs into your portal and checks you
 
 - It's simple and easy to use
 - Works on Windows, macOS, and Linux
-- More convenient
+- Saves you the time and stress of checking your attendance yourself 
 
 ---
 
 ## Requirements
 - Python **3.8 or higher**  
-- Internet connection (for installing dependencies)
+- Internet connection (for installing dependencies) and page navigation
 
 ---
 
@@ -22,7 +22,7 @@ This is a simple python script I wrote that logs into your portal and checks you
 
 ### Step 1: Check if Python is installed
 
-1. Open your **Command Prompt (Windows)** or **Terminal (macOS/Linux)**.  
+1. Open your **Command Prompt** on Windows
 2. Type the following and press **Enter**:
    ```bash
    python --version
@@ -109,11 +109,11 @@ installs playwright and stdiomask modules on windows while
 installs the dependencies on mac.
 
 ```bash
-  playwright install
+  playwright install chromium
 ``` 
-installs the browsers playwright uses on windows while 
+installs the headless browser playwright uses on windows while 
 ```bash
-  python3 -m playwright install
+  python3 -m playwright install chromium
 ``` 
 does the same on mac.
 
