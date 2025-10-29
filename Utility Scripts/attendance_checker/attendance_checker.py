@@ -2,7 +2,7 @@ import asyncio
 import stdiomask
 from playwright.async_api import async_playwright
 
-print("Enter your portal username: ")
+print("Enter your portal username (Reg No): ")
 user = input().strip() # Username
 
 passwd = stdiomask.getpass(prompt="Enter your portal password: ", mask="*") # Password
