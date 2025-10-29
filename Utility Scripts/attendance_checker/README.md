@@ -60,7 +60,7 @@ If you see something like python 3.10.0, you're good to go! If not, then visit [
 
 ### Step 3: For MacOS
 
-1. Like in Windows, first open your Terminal and confirm whether you have python already installed
+1. Like in Windows, first open your **Terminal** and confirm whether you have python already installed
 2. Type the following and press **Enter:**
 ```bash
    python3 --version
@@ -91,7 +91,7 @@ for windows and
 ``` 
 for mac.
 
-If they don't work, refer back to step 2 and ensure you add both Python and pip to PATH.
+If this doesn't work for you, refer back to step 2 and ensure you add both Python and pip to PATH **(Windows Users)**.
 
 ### Step 5: Install project dependencies
 
@@ -119,7 +119,7 @@ does the same on mac.
 
 ### Step 6: Run the script
 
-It may seem daunting to set up, but once python and all the dependencies are installed, you can double-click the script to run it however many times as you want on Windows!
+It may seem daunting to set up, but once python and all the dependencies are installed, you can double-click the script to run it however many times you want on Windows!
 
 However, to run the script on Mac, users will need to right-click and open the script with Python Launcher. If you see any prompt window pop up, allow the script to access your terminal, and it should run just fine.
 
