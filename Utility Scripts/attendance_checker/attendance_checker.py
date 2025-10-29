@@ -1,5 +1,6 @@
 import asyncio
 import stdiomask
+from pathlib import Path
 from playwright.async_api import async_playwright
 
 print("Enter your portal username (Reg No): ")
@@ -49,8 +50,9 @@ async def attendance_checker(url, username, password, mode):
             
                 # Get Lecture Attendance
                 frame = page.frame_locator("iframe#frame")
-                await frame.locator("div.col-md-10").wait_for(state="visible")
+                await frame.locator("div.col-md-10").wait_for(state="visible", timeout=0)
                 await frame.locator("div.col-md-10").screenshot(path="lt_attendance.png")
+                print(f"lt_attendance.png saved to {Path.cwd()}")
             
             elif mode == "2":
                 await page.click("text=Student Affairs Attendance", timeout=0)
@@ -58,13 +60,15 @@ async def attendance_checker(url, username, password, mode):
             
                 # Get Chapel Attendance
                 frame = page.frame_locator("iframe#frame")
-                await frame.locator("div#upload-report").wait_for(state="visible")
+                await frame.locator("div#upload-report").wait_for(state="visible", timeout=0)
                 await frame.locator("div#upload-report").screenshot(path="chapel_attendance.png")
+                print(f"chapel_attendance.png saved to {Path.cwd()}")
             
                 # Get Roll Call
                 await frame.locator("li#event3").click()
                 await asyncio.sleep(10) # Waits for the Roll Call to load
                 await frame.locator("div#upload-report").screenshot(path="roll_call.png")
+                print(f"roll_call.png saved to {Path.cwd()}")
                 
         else:
             print("Invalid mode: Lecture Attendance (1) or Student Affairs (2)")
