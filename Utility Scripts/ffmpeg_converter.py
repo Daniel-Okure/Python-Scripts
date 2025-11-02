@@ -1,22 +1,22 @@
-import os, subprocess
+import subprocess
+from pathlib import Path
 
 
 def ffmpeg_converter():
-    video_path = os.path.join(os.path.expanduser("~"), "Videos")
-    music_path = os.path.join(os.path.expanduser("~"), "Music")
-    videos = os.listdir(video_path)
+    video_path = Path.home() / "Videos"
+    music_path = Path.home() / "Music"
+    videos = video_path.iterdir()
     
     
     for video in videos:
-        file_path = os.path.join(video_path, video)
         
-        if file_path.endswith((".ts", ".mp4", ".mkv", ".webm")):
-            name, _ = os.path.splitext(video)
-            output_path = os.path.join(music_path, f"{name}.mp3")
+        if video.name.endswith((".ts", ".mp4", ".mkv", ".webm")):
+            name = video.stem
+            output_path = music_path / f"{name}.mp3"
     
-            command = ["ffmpeg", "-i", file_path, "-q:a", "0", "-map", "a", output_path]  # Requires ffmpeg
+            command = ["ffmpeg", "-i", video, "-q:a", "0", "-map", "a", output_path]  # Requires ffmpeg
             subprocess.run(command, check=True)
-            print(f"Converted: {file_path} -> {output_path}")
+            print(f"Converted: {video} -> {output_path}")
 
 
 if __name__ == "__main__":
