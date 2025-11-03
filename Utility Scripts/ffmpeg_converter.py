@@ -2,11 +2,11 @@ import subprocess
 from pathlib import Path
 
 
-def video_converter(dest, video):
+def ffmpeg_converter(ext, video):
     music_path = Path.home() / "Music"
         
     video_name = video.stem
-    output_path = music_path / f"{video_name}{dest}"
+    output_path = music_path / f"{video_name}{ext}"
     
     command = ["ffmpeg", "-i", str(video), "-q:a", "0", "-map", "a", str(output_path)]  # Requires ffmpeg
     subprocess.run(command, check=True)
@@ -16,8 +16,11 @@ def video_converter(dest, video):
 if __name__ == "__main__":
     video_path = Path(input("Enter absolute path of specific video: ").strip())
     dest_format = input('Enter desired format (e.g., ".wav"): ').strip()
+    
+    if "." not in dest_format:
+        dest_format = "." + dest_format
 
-    video_converter(dest_format, video_path)
+    ffmpeg_converter(dest_format, video_path)
 
     
 
