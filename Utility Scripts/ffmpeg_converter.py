@@ -21,31 +21,3 @@ if __name__ == "__main__":
         dest_format = "." + dest_format
 
     ffmpeg_converter(dest_format, video_path)
-
-    
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
