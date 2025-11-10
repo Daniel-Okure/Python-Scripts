@@ -11,6 +11,8 @@ passwd = stdiomask.getpass(prompt="Enter your portal password: ", mask="*") # Pa
 print("What do you want to check: Lecture Attendance (1) or Student Affairs (2)?")
 choice = input().strip()
 
+print("Logging in...")
+
 async def attendance_checker(url, username, password, mode):
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True) # Set to False if you want to see the magic :)
